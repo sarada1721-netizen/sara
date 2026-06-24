@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a; /* Slate 900: 깊고 세련된 우주 느낌의 배경색 */
+  --foreground: #f8fafc; /* Slate 50: 깔끔한 백색 글자색 */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f8fafc; /* Slate 50: 깔끔하고 밝은 배경 */
+    --foreground: #0f172a; /* Slate 900: 가독성이 좋은 다크 블루 */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 마이크로 인터랙션 및 스크롤바 디자인 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Blue 500 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; /* Blue 600 */
+}
