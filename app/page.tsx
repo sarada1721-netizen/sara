@@ -63,14 +63,21 @@ function Header() {
           <a href="#" className="hover:text-emerald-400 transition-colors">지구 탐구</a>
           <a href="#" className="hover:text-emerald-400 transition-colors">우주 탐구</a>
           <a href="#" className="hover:text-emerald-400 transition-colors">대기/해양</a>
-          {/* // 여기에 새로운 네비게이션 메뉴 항목을 추가하세요 */}
+          <Link
+            href="/quiz"
+            className="flex items-center gap-1.5 text-yellow-400 hover:text-yellow-300 transition-colors font-bold"
+          >
+            🧠 OX 퀴즈
+          </Link>
         </nav>
 
-        {/* 헤더 오른쪽 액션 버튼 */}
-        <div className="flex items-center gap-4">
-          <button className="px-4 py-1.5 text-xs sm:text-sm font-semibold rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all duration-200">
-            시작하기
-          </button>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/quiz"
+            className="hidden sm:flex items-center gap-1.5 px-4 py-1.5 text-xs sm:text-sm font-bold rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-slate-900 hover:from-yellow-300 hover:to-orange-300 transition-all duration-200 shadow-lg shadow-yellow-500/20"
+          >
+            🎮 OX 퀴즈 도전
+          </Link>
         </div>
 
       </div>
