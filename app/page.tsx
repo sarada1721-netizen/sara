@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -172,9 +173,21 @@ function ContentPlaceholder() {
             </p>
           </div>
 
-          {/* 
-            // 여기에 새로운 컴포넌트를 추가하세요 (예: 퀴즈 목록, 최근 성적표 등)
-          */}
+          {/* OX 퀴즈 카드 */}
+          <Link
+            href="/quiz"
+            className="p-6 rounded-2xl bg-slate-800/40 border border-slate-700/50 hover:border-yellow-400/50 transition-all duration-300 group block no-underline"
+            style={{ textDecoration: 'none' }}
+          >
+            <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">🧠</div>
+            <h3 className="text-lg font-bold text-slate-100 mb-2">OX 퀴즈 도전!</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              지구과학 핵심 개념 10문제를 OX로 풀어보고 리더보드에 이름을 올려보세요!
+            </p>
+            <span className="inline-block mt-4 px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-400 text-slate-900">
+              지금 도전 →
+            </span>
+          </Link>
         </div>
 
       </div>
